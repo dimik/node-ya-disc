@@ -1,7 +1,8 @@
 var url = require('url'),
+    http = require('http'),
     querystring = require('querystring'),
-    YaDisk = require(__dirname + '/lib/ya-disk'),
-    disk = new YaDisk({ token: 'c5a90c24062242889b23459a0c15ff53' });
+    YaDisc = require(__dirname + '/lib/ya-disc'),
+    disc = new YaDisc({ token: 'c5a90c24062242889b23459a0c15ff53' });
 
 http.createServer(function (request, response) {
     console.log(request.url, request.headers, request.method);
@@ -9,7 +10,7 @@ http.createServer(function (request, response) {
         query = querystring.parse(options.query),
         apiMethod = options.pathname.match(/\w+/)[0];
 
-    disk.callMethod(apiMethod, query)
+    disc.callMethod(apiMethod, query)
         .then(function (res) {
             response.writeHead(200, {'Content-Type': 'application/json'});
             response.end(res.toJSON());
