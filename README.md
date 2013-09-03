@@ -1,4 +1,4 @@
-ya-disk
+node-ya-disc
 =======
 
-NodeJS client for Yandex.Disk
+NodeJS client for Yandex.Disc
