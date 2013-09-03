@@ -1,5 +1,4 @@
-var http = require('http'),
-    url = require('url'),
+var url = require('url'),
     querystring = require('querystring'),
     YaDisk = require(__dirname + '/lib/ya-disk'),
     disk = new YaDisk({ token: 'c5a90c24062242889b23459a0c15ff53' });
