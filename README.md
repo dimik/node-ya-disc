@@ -11,7 +11,7 @@ using an amazing <a href="http://nodejs.org/">NodeJS</a> platform.
 
 Methods have names according to Unix file system commands that everybody familar with.
 API consists of 'ls', 'cp', 'mv', 'rm', 'df', 'mkdir', 'chmod', 'id' and additional 'get', 'put' and 'getPreview' methods.
-You are able to use 'request' method of the Disk class, passing it requested method name as the first argument
+You are able to use 'request' method of the YaDisk class, passing it requested method name as the first argument
 and options as the second one.
 It returns <a href="https://github.com/dfilatov/vow">Promise A+</a> instance, fulfilled with properly View class
 according to 'content-type' response header from Yandex.Disk backend or <a href="http://nodejs.org/api/buffer.html">NodeJS Buffer</a> instance if request returns file.
